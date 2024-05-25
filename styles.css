@@ -24,7 +24,6 @@ body {
 
 .container-header {
     position: relative;
-    display: inline-block;
 }
 
 
@@ -338,61 +337,129 @@ a {
 /* the mobile part */
 
 @media only screen and (max-width: 376px) {
-         html, body {
-            overflow-x: hidden;
-          }
 
-        .companyname{
-            font-size: 1.5em;
-            padding-left: 1em;
-            padding-right: 0;
-            margin-top:1em;
-            margin-left: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: var(--White);
-            font-family: "fraunces", sans-serif;
-            font-weight: 900;
-            font-style: normal;
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* Burger menu */
+
+    .line1,
+    .line2,
+    .line3 {
+        background-color: var(--Verydarkdesaturatedblue);
+        position: fixed;
+        width: 30px;
+        height: 2px;
+        right: 20px;
+        top: 35px;
+        z-index: 5;
+    }
+
+    .line1 {
+        top: 25px;
+    }
+
+    .line3 {
+        top: 45px;
+    }
+
+    li,
+    a {
+        color: var(--Darkdesaturatedcyan);
+    }
+
+    .topright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--White);
+        position: fixed;
+        z-index: 5;
+        gap: 2em;
+        padding: 2em 6em 3em 6em;
+        margin: 2em 1em 0 0;
+    }
+
+    .topright:before {
+        content: '';
+        position: absolute;
+        top: -16%; 
+        right: 0;
+        border-top: 40px solid rgb(82, 188, 253);
+        border-right: 40px solid white;
+        width: 0;
         }
 
-        .container-header > img{
-            height:60vh;
-            width:200vw;
-        }
-        
-        .container-one {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0rem;
-        }
 
-        .maintitle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            position: absolute;
-            text-align: center;
-            top: 40%;
-            left: 50%;
-            gap:0;
-            color: var(--White);
-            letter-spacing: 5px;
-            font-family: "Fraunces", sans-serif;
-            font-weight: 900;
-            font-style: normal;
-            font-size: 1.5em;
-        }
+    /* hiding the nav links */
+    .dead {
+        display: none;
+    }
 
-      .egg{
-        grid-row:1;
-      }
+    .active {
+        background-color: var(--Yellow);
+        color: black;
+        padding: 1em 1.5em;
+        border-radius: 50px;
+        font-family: "Fraunces", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
 
-      .text-container {
+    .companyname {
+        font-size: 1.5em;
+        padding-left: 1em;
+        padding-right: 0;
+        margin-top: 1em;
+        margin-left: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: var(--White);
+        font-family: "fraunces", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .container-header>img {
+        height: 60vh;
+        width: 200vw;
+    }
+
+    .container-one {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0rem;
+    }
+
+    .maintitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        gap: 0;
+        color: var(--White);
+        letter-spacing: 5px;
+        font-family: "Fraunces", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 1.5em;
+    }
+
+    .egg {
+        grid-row: 1;
+    }
+
+    .text-container {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -405,23 +472,21 @@ a {
         color: var(--Verydarkdesaturatedblue);
     }
 
-      .container-two{
+    .container-two {
         display: grid;
         grid-template-columns: 1fr;
         gap: 5rem;
-      }
+    }
 
-      .container-three{
+    .container-three {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0rem;
-      }
+    }
 
-      .image-container{
-        position:relative;
-      }
 
-    .text2 > p {
+
+    .text2>p {
         padding: 0 1em;
         margin-bottom: -3.5em;
         line-height: 1.5em;
@@ -430,7 +495,7 @@ a {
         font-style: normal;
     }
 
-    .text3 > p {
+    .text3>p {
         padding: 0 1em;
         margin-bottom: -3.5em;
         line-height: 1.5em;
